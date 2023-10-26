@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+    dotnet-token-server:
+        build:
+            context: .
+            dockerfile: Dockerfile
+
+        ports:
+            - "3000:3000"
+        
+        environment:
+            - ASPNETCORE_URLS=http://+:3000
+        
+        container_name: incode-dotnet-token-and-url-server
